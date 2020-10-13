@@ -1,0 +1,2067 @@
+//
+// Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.2.8-b130911.1802 
+// Visite <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
+// Generado el: 2017.12.18 a las 10:16:08 PM CST 
+//
+
+
+package transaction.context.xml;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+
+
+/**
+ * <p>Clase Java para anonymous complex type.
+ * 
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * 
+ * <pre>
+ * &lt;complexType>
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="MAPPING">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;attribute name="PROCESS" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                 &lt;attribute name="ORDER_ID" type="{http://www.w3.org/2001/XMLSchema}int" />
+ *                 &lt;attribute name="FORMAT" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                 &lt;attribute name="SOURCEINPUT" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                 &lt;attribute name="COLUMNNAME_INPUT" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                 &lt;attribute name="SOURCEOUT" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                 &lt;attribute name="COLUMNNAME_OUTPUT" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *         &lt;element name="SOURCES">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;sequence>
+ *                   &lt;element name="METADATA">
+ *                     &lt;complexType>
+ *                       &lt;complexContent>
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                           &lt;attribute name="SOURCE" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                           &lt;attribute name="COLUMNAME" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                           &lt;attribute name="ORDER_ID" type="{http://www.w3.org/2001/XMLSchema}int" />
+ *                           &lt;attribute name="SQLTYPE" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                         &lt;/restriction>
+ *                       &lt;/complexContent>
+ *                     &lt;/complexType>
+ *                   &lt;/element>
+ *                   &lt;element name="SQL_PARAMETERS">
+ *                     &lt;complexType>
+ *                       &lt;complexContent>
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                           &lt;attribute name="SOURCE" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                           &lt;attribute name="PARAMETER" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                           &lt;attribute name="ID_ORDER" type="{http://www.w3.org/2001/XMLSchema}int" />
+ *                           &lt;attribute name="TYPE">
+ *                             &lt;simpleType>
+ *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *                                 &lt;enumeration value="DIRECT"/>
+ *                                 &lt;enumeration value="PROPERTY"/>
+ *                               &lt;/restriction>
+ *                             &lt;/simpleType>
+ *                           &lt;/attribute>
+ *                           &lt;attribute name="SQLTYPE">
+ *                             &lt;simpleType>
+ *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *                                 &lt;enumeration value="VARCHAR"/>
+ *                                 &lt;enumeration value="LONGVARCHAR"/>
+ *                                 &lt;enumeration value="NUMERIC"/>
+ *                                 &lt;enumeration value="DECIMAL"/>
+ *                                 &lt;enumeration value="BIT"/>
+ *                                 &lt;enumeration value="TINYINT"/>
+ *                                 &lt;enumeration value="SMALLINT"/>
+ *                                 &lt;enumeration value="INTEGER"/>
+ *                                 &lt;enumeration value="BIGINT"/>
+ *                                 &lt;enumeration value="REAL"/>
+ *                                 &lt;enumeration value="FLOAT"/>
+ *                                 &lt;enumeration value="DOUBLE"/>
+ *                                 &lt;enumeration value="BINARY"/>
+ *                                 &lt;enumeration value="VARBINARY"/>
+ *                                 &lt;enumeration value="LONGVARBINARY"/>
+ *                                 &lt;enumeration value="DATE"/>
+ *                                 &lt;enumeration value="TIME"/>
+ *                                 &lt;enumeration value="TIMESTAMP"/>
+ *                               &lt;/restriction>
+ *                             &lt;/simpleType>
+ *                           &lt;/attribute>
+ *                           &lt;attribute name="IS_MULTIVALUE" type="{http://www.w3.org/2001/XMLSchema}int" />
+ *                           &lt;attribute name="VALUE" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                         &lt;/restriction>
+ *                       &lt;/complexContent>
+ *                     &lt;/complexType>
+ *                   &lt;/element>
+ *                 &lt;/sequence>
+ *                 &lt;attribute name="SOURCE" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                 &lt;attribute name="NAME" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                 &lt;attribute name="TYPEDATA" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                 &lt;attribute name="TYPESOURCE" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                 &lt;attribute name="FILENAME" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                 &lt;attribute name="PATH" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                 &lt;attribute name="HEADER" type="{http://www.w3.org/2001/XMLSchema}byte" />
+ *                 &lt;attribute name="FORMAT" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                 &lt;attribute name="DELIMITER" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                 &lt;attribute name="LEFT_ENCLOSURE" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                 &lt;attribute name="RIGHT_ENCLOUSURE" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                 &lt;attribute name="SHEET_NAME" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                 &lt;attribute name="DATASOURCE" type="{http://www.w3.org/2001/XMLSchema}int" />
+ *                 &lt;attribute name="SCRIPTSQL" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *         &lt;element name="UNITS_PROCCESS">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;attribute name="PROCESS" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                 &lt;attribute name="DESCRIPTION" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                 &lt;attribute name="SOURCE_INPUT" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                 &lt;attribute name="SOURCE_OUTPUT" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *         &lt;element name="PROPERTIES">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;attribute name="PROPERTY" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                 &lt;attribute name="PROPERTY_PARENT" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                 &lt;attribute name="CATEGORY" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                 &lt;attribute name="SQLTYPE">
+ *                   &lt;simpleType>
+ *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *                       &lt;enumeration value="VARCHAR"/>
+ *                       &lt;enumeration value="LONGVARCHAR"/>
+ *                       &lt;enumeration value="NUMERIC"/>
+ *                       &lt;enumeration value="DECIMAL"/>
+ *                       &lt;enumeration value="BIT"/>
+ *                       &lt;enumeration value="TINYINT"/>
+ *                       &lt;enumeration value="SMALLINT"/>
+ *                       &lt;enumeration value="INTEGER"/>
+ *                       &lt;enumeration value="BIGINT"/>
+ *                       &lt;enumeration value="REAL"/>
+ *                       &lt;enumeration value="FLOAT"/>
+ *                       &lt;enumeration value="DOUBLE"/>
+ *                       &lt;enumeration value="BINARY"/>
+ *                       &lt;enumeration value="VARBINARY"/>
+ *                       &lt;enumeration value="LONGVARBINARY"/>
+ *                       &lt;enumeration value="DATE"/>
+ *                       &lt;enumeration value="TIME"/>
+ *                       &lt;enumeration value="TIMESTAMP"/>
+ *                     &lt;/restriction>
+ *                   &lt;/simpleType>
+ *                 &lt;/attribute>
+ *                 &lt;attribute name="TYPE">
+ *                   &lt;simpleType>
+ *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *                       &lt;enumeration value="DIRECT"/>
+ *                       &lt;enumeration value="SQLVALUE"/>
+ *                     &lt;/restriction>
+ *                   &lt;/simpleType>
+ *                 &lt;/attribute>
+ *                 &lt;attribute name="DATASOURCE" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                 &lt;attribute name="IS_MULTIVALUE" type="{http://www.w3.org/2001/XMLSchema}int" />
+ *                 &lt;attribute name="VALUE" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *         &lt;element name="DATASOURCES">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;attribute name="DATASOURCE" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                 &lt;attribute name="NAME" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                 &lt;attribute name="USER" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                 &lt;attribute name="PASSWORD" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                 &lt;attribute name="URL" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                 &lt;attribute name="DRIVERCLASSNAME" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                 &lt;attribute name="VALIDATION_QUERY" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "", propOrder = {
+    "mapping",
+    "sources",
+    "unitsproccess",
+    "properties",
+    "datasources"
+})
+@XmlRootElement(name = "TransactionManager")
+public class TransactionManager {
+
+    @XmlElement(name = "MAPPING", required = true)
+    protected TransactionManager.MAPPING mapping;
+    @XmlElement(name = "SOURCES", required = true)
+    protected TransactionManager.SOURCES sources;
+    @XmlElement(name = "UNITS_PROCCESS", required = true)
+    protected TransactionManager.UNITSPROCCESS unitsproccess;
+    @XmlElement(name = "PROPERTIES", required = true)
+    protected TransactionManager.PROPERTIES properties;
+    @XmlElement(name = "DATASOURCES", required = true)
+    protected TransactionManager.DATASOURCES datasources;
+
+    /**
+     * Obtiene el valor de la propiedad mapping.
+     * 
+     * @return
+     *     possible object is
+     *     {@link TransactionManager.MAPPING }
+     *     
+     */
+    public TransactionManager.MAPPING getMAPPING() {
+        return mapping;
+    }
+
+    /**
+     * Define el valor de la propiedad mapping.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link TransactionManager.MAPPING }
+     *     
+     */
+    public void setMAPPING(TransactionManager.MAPPING value) {
+        this.mapping = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad sources.
+     * 
+     * @return
+     *     possible object is
+     *     {@link TransactionManager.SOURCES }
+     *     
+     */
+    public TransactionManager.SOURCES getSOURCES() {
+        return sources;
+    }
+
+    /**
+     * Define el valor de la propiedad sources.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link TransactionManager.SOURCES }
+     *     
+     */
+    public void setSOURCES(TransactionManager.SOURCES value) {
+        this.sources = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad unitsproccess.
+     * 
+     * @return
+     *     possible object is
+     *     {@link TransactionManager.UNITSPROCCESS }
+     *     
+     */
+    public TransactionManager.UNITSPROCCESS getUNITSPROCCESS() {
+        return unitsproccess;
+    }
+
+    /**
+     * Define el valor de la propiedad unitsproccess.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link TransactionManager.UNITSPROCCESS }
+     *     
+     */
+    public void setUNITSPROCCESS(TransactionManager.UNITSPROCCESS value) {
+        this.unitsproccess = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad properties.
+     * 
+     * @return
+     *     possible object is
+     *     {@link TransactionManager.PROPERTIES }
+     *     
+     */
+    public TransactionManager.PROPERTIES getPROPERTIES() {
+        return properties;
+    }
+
+    /**
+     * Define el valor de la propiedad properties.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link TransactionManager.PROPERTIES }
+     *     
+     */
+    public void setPROPERTIES(TransactionManager.PROPERTIES value) {
+        this.properties = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad datasources.
+     * 
+     * @return
+     *     possible object is
+     *     {@link TransactionManager.DATASOURCES }
+     *     
+     */
+    public TransactionManager.DATASOURCES getDATASOURCES() {
+        return datasources;
+    }
+
+    /**
+     * Define el valor de la propiedad datasources.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link TransactionManager.DATASOURCES }
+     *     
+     */
+    public void setDATASOURCES(TransactionManager.DATASOURCES value) {
+        this.datasources = value;
+    }
+
+
+    /**
+     * <p>Clase Java para anonymous complex type.
+     * 
+     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+     * 
+     * <pre>
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;attribute name="DATASOURCE" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *       &lt;attribute name="NAME" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *       &lt;attribute name="USER" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *       &lt;attribute name="PASSWORD" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *       &lt;attribute name="URL" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *       &lt;attribute name="DRIVERCLASSNAME" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *       &lt;attribute name="VALIDATION_QUERY" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
+     * </pre>
+     * 
+     * 
+     */
+    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlType(name = "")
+    public static class DATASOURCES {
+
+        @XmlAttribute(name = "DATASOURCE")
+        protected String datasource;
+        @XmlAttribute(name = "NAME")
+        protected String name;
+        @XmlAttribute(name = "USER")
+        protected String user;
+        @XmlAttribute(name = "PASSWORD")
+        protected String password;
+        @XmlAttribute(name = "URL")
+        protected String url;
+        @XmlAttribute(name = "DRIVERCLASSNAME")
+        protected String driverclassname;
+        @XmlAttribute(name = "VALIDATION_QUERY")
+        protected String validationquery;
+
+        /**
+         * Obtiene el valor de la propiedad datasource.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getDATASOURCE() {
+            return datasource;
+        }
+
+        /**
+         * Define el valor de la propiedad datasource.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setDATASOURCE(String value) {
+            this.datasource = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad name.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getNAME() {
+            return name;
+        }
+
+        /**
+         * Define el valor de la propiedad name.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setNAME(String value) {
+            this.name = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad user.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getUSER() {
+            return user;
+        }
+
+        /**
+         * Define el valor de la propiedad user.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setUSER(String value) {
+            this.user = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad password.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getPASSWORD() {
+            return password;
+        }
+
+        /**
+         * Define el valor de la propiedad password.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setPASSWORD(String value) {
+            this.password = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad url.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getURL() {
+            return url;
+        }
+
+        /**
+         * Define el valor de la propiedad url.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setURL(String value) {
+            this.url = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad driverclassname.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getDRIVERCLASSNAME() {
+            return driverclassname;
+        }
+
+        /**
+         * Define el valor de la propiedad driverclassname.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setDRIVERCLASSNAME(String value) {
+            this.driverclassname = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad validationquery.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getVALIDATIONQUERY() {
+            return validationquery;
+        }
+
+        /**
+         * Define el valor de la propiedad validationquery.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setVALIDATIONQUERY(String value) {
+            this.validationquery = value;
+        }
+
+    }
+
+
+    /**
+     * <p>Clase Java para anonymous complex type.
+     * 
+     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+     * 
+     * <pre>
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;attribute name="PROCESS" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *       &lt;attribute name="ORDER_ID" type="{http://www.w3.org/2001/XMLSchema}int" />
+     *       &lt;attribute name="FORMAT" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *       &lt;attribute name="SOURCEINPUT" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *       &lt;attribute name="COLUMNNAME_INPUT" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *       &lt;attribute name="SOURCEOUT" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *       &lt;attribute name="COLUMNNAME_OUTPUT" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
+     * </pre>
+     * 
+     * 
+     */
+    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlType(name = "")
+    public static class MAPPING {
+
+        @XmlAttribute(name = "PROCESS")
+        protected String process;
+        @XmlAttribute(name = "ORDER_ID")
+        protected Integer orderid;
+        @XmlAttribute(name = "FORMAT")
+        protected String format;
+        @XmlAttribute(name = "SOURCEINPUT")
+        protected String sourceinput;
+        @XmlAttribute(name = "COLUMNNAME_INPUT")
+        protected String columnnameinput;
+        @XmlAttribute(name = "SOURCEOUT")
+        protected String sourceout;
+        @XmlAttribute(name = "COLUMNNAME_OUTPUT")
+        protected String columnnameoutput;
+
+        /**
+         * Obtiene el valor de la propiedad process.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getPROCESS() {
+            return process;
+        }
+
+        /**
+         * Define el valor de la propiedad process.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setPROCESS(String value) {
+            this.process = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad orderid.
+         * 
+         * @return
+         *     possible object is
+         *     {@link Integer }
+         *     
+         */
+        public Integer getORDERID() {
+            return orderid;
+        }
+
+        /**
+         * Define el valor de la propiedad orderid.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link Integer }
+         *     
+         */
+        public void setORDERID(Integer value) {
+            this.orderid = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad format.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getFORMAT() {
+            return format;
+        }
+
+        /**
+         * Define el valor de la propiedad format.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setFORMAT(String value) {
+            this.format = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad sourceinput.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getSOURCEINPUT() {
+            return sourceinput;
+        }
+
+        /**
+         * Define el valor de la propiedad sourceinput.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setSOURCEINPUT(String value) {
+            this.sourceinput = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad columnnameinput.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getCOLUMNNAMEINPUT() {
+            return columnnameinput;
+        }
+
+        /**
+         * Define el valor de la propiedad columnnameinput.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setCOLUMNNAMEINPUT(String value) {
+            this.columnnameinput = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad sourceout.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getSOURCEOUT() {
+            return sourceout;
+        }
+
+        /**
+         * Define el valor de la propiedad sourceout.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setSOURCEOUT(String value) {
+            this.sourceout = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad columnnameoutput.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getCOLUMNNAMEOUTPUT() {
+            return columnnameoutput;
+        }
+
+        /**
+         * Define el valor de la propiedad columnnameoutput.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setCOLUMNNAMEOUTPUT(String value) {
+            this.columnnameoutput = value;
+        }
+
+    }
+
+
+    /**
+     * <p>Clase Java para anonymous complex type.
+     * 
+     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+     * 
+     * <pre>
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;attribute name="PROPERTY" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *       &lt;attribute name="PROPERTY_PARENT" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *       &lt;attribute name="CATEGORY" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *       &lt;attribute name="SQLTYPE">
+     *         &lt;simpleType>
+     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+     *             &lt;enumeration value="VARCHAR"/>
+     *             &lt;enumeration value="LONGVARCHAR"/>
+     *             &lt;enumeration value="NUMERIC"/>
+     *             &lt;enumeration value="DECIMAL"/>
+     *             &lt;enumeration value="BIT"/>
+     *             &lt;enumeration value="TINYINT"/>
+     *             &lt;enumeration value="SMALLINT"/>
+     *             &lt;enumeration value="INTEGER"/>
+     *             &lt;enumeration value="BIGINT"/>
+     *             &lt;enumeration value="REAL"/>
+     *             &lt;enumeration value="FLOAT"/>
+     *             &lt;enumeration value="DOUBLE"/>
+     *             &lt;enumeration value="BINARY"/>
+     *             &lt;enumeration value="VARBINARY"/>
+     *             &lt;enumeration value="LONGVARBINARY"/>
+     *             &lt;enumeration value="DATE"/>
+     *             &lt;enumeration value="TIME"/>
+     *             &lt;enumeration value="TIMESTAMP"/>
+     *           &lt;/restriction>
+     *         &lt;/simpleType>
+     *       &lt;/attribute>
+     *       &lt;attribute name="TYPE">
+     *         &lt;simpleType>
+     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+     *             &lt;enumeration value="DIRECT"/>
+     *             &lt;enumeration value="SQLVALUE"/>
+     *           &lt;/restriction>
+     *         &lt;/simpleType>
+     *       &lt;/attribute>
+     *       &lt;attribute name="DATASOURCE" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *       &lt;attribute name="IS_MULTIVALUE" type="{http://www.w3.org/2001/XMLSchema}int" />
+     *       &lt;attribute name="VALUE" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
+     * </pre>
+     * 
+     * 
+     */
+    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlType(name = "")
+    public static class PROPERTIES {
+
+        @XmlAttribute(name = "PROPERTY")
+        protected String property;
+        @XmlAttribute(name = "PROPERTY_PARENT")
+        protected String propertyparent;
+        @XmlAttribute(name = "CATEGORY")
+        protected String category;
+        @XmlAttribute(name = "SQLTYPE")
+        protected String sqltype;
+        @XmlAttribute(name = "TYPE")
+        protected String type;
+        @XmlAttribute(name = "DATASOURCE")
+        protected String datasource;
+        @XmlAttribute(name = "IS_MULTIVALUE")
+        protected Integer ismultivalue;
+        @XmlAttribute(name = "VALUE")
+        protected String value;
+
+        /**
+         * Obtiene el valor de la propiedad property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getPROPERTY() {
+            return property;
+        }
+
+        /**
+         * Define el valor de la propiedad property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setPROPERTY(String value) {
+            this.property = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad propertyparent.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getPROPERTYPARENT() {
+            return propertyparent;
+        }
+
+        /**
+         * Define el valor de la propiedad propertyparent.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setPROPERTYPARENT(String value) {
+            this.propertyparent = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad category.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getCATEGORY() {
+            return category;
+        }
+
+        /**
+         * Define el valor de la propiedad category.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setCATEGORY(String value) {
+            this.category = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad sqltype.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getSQLTYPE() {
+            return sqltype;
+        }
+
+        /**
+         * Define el valor de la propiedad sqltype.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setSQLTYPE(String value) {
+            this.sqltype = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad type.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getTYPE() {
+            return type;
+        }
+
+        /**
+         * Define el valor de la propiedad type.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setTYPE(String value) {
+            this.type = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad datasource.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getDATASOURCE() {
+            return datasource;
+        }
+
+        /**
+         * Define el valor de la propiedad datasource.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setDATASOURCE(String value) {
+            this.datasource = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad ismultivalue.
+         * 
+         * @return
+         *     possible object is
+         *     {@link Integer }
+         *     
+         */
+        public Integer getISMULTIVALUE() {
+            return ismultivalue;
+        }
+
+        /**
+         * Define el valor de la propiedad ismultivalue.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link Integer }
+         *     
+         */
+        public void setISMULTIVALUE(Integer value) {
+            this.ismultivalue = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad value.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getVALUE() {
+            return value;
+        }
+
+        /**
+         * Define el valor de la propiedad value.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setVALUE(String value) {
+            this.value = value;
+        }
+
+    }
+
+
+    /**
+     * <p>Clase Java para anonymous complex type.
+     * 
+     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+     * 
+     * <pre>
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;sequence>
+     *         &lt;element name="METADATA">
+     *           &lt;complexType>
+     *             &lt;complexContent>
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                 &lt;attribute name="SOURCE" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *                 &lt;attribute name="COLUMNAME" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *                 &lt;attribute name="ORDER_ID" type="{http://www.w3.org/2001/XMLSchema}int" />
+     *                 &lt;attribute name="SQLTYPE" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *               &lt;/restriction>
+     *             &lt;/complexContent>
+     *           &lt;/complexType>
+     *         &lt;/element>
+     *         &lt;element name="SQL_PARAMETERS">
+     *           &lt;complexType>
+     *             &lt;complexContent>
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                 &lt;attribute name="SOURCE" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *                 &lt;attribute name="PARAMETER" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *                 &lt;attribute name="ID_ORDER" type="{http://www.w3.org/2001/XMLSchema}int" />
+     *                 &lt;attribute name="TYPE">
+     *                   &lt;simpleType>
+     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+     *                       &lt;enumeration value="DIRECT"/>
+     *                       &lt;enumeration value="PROPERTY"/>
+     *                     &lt;/restriction>
+     *                   &lt;/simpleType>
+     *                 &lt;/attribute>
+     *                 &lt;attribute name="SQLTYPE">
+     *                   &lt;simpleType>
+     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+     *                       &lt;enumeration value="VARCHAR"/>
+     *                       &lt;enumeration value="LONGVARCHAR"/>
+     *                       &lt;enumeration value="NUMERIC"/>
+     *                       &lt;enumeration value="DECIMAL"/>
+     *                       &lt;enumeration value="BIT"/>
+     *                       &lt;enumeration value="TINYINT"/>
+     *                       &lt;enumeration value="SMALLINT"/>
+     *                       &lt;enumeration value="INTEGER"/>
+     *                       &lt;enumeration value="BIGINT"/>
+     *                       &lt;enumeration value="REAL"/>
+     *                       &lt;enumeration value="FLOAT"/>
+     *                       &lt;enumeration value="DOUBLE"/>
+     *                       &lt;enumeration value="BINARY"/>
+     *                       &lt;enumeration value="VARBINARY"/>
+     *                       &lt;enumeration value="LONGVARBINARY"/>
+     *                       &lt;enumeration value="DATE"/>
+     *                       &lt;enumeration value="TIME"/>
+     *                       &lt;enumeration value="TIMESTAMP"/>
+     *                     &lt;/restriction>
+     *                   &lt;/simpleType>
+     *                 &lt;/attribute>
+     *                 &lt;attribute name="IS_MULTIVALUE" type="{http://www.w3.org/2001/XMLSchema}int" />
+     *                 &lt;attribute name="VALUE" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *               &lt;/restriction>
+     *             &lt;/complexContent>
+     *           &lt;/complexType>
+     *         &lt;/element>
+     *       &lt;/sequence>
+     *       &lt;attribute name="SOURCE" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *       &lt;attribute name="NAME" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *       &lt;attribute name="TYPEDATA" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *       &lt;attribute name="TYPESOURCE" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *       &lt;attribute name="FILENAME" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *       &lt;attribute name="PATH" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *       &lt;attribute name="HEADER" type="{http://www.w3.org/2001/XMLSchema}byte" />
+     *       &lt;attribute name="FORMAT" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *       &lt;attribute name="DELIMITER" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *       &lt;attribute name="LEFT_ENCLOSURE" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *       &lt;attribute name="RIGHT_ENCLOUSURE" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *       &lt;attribute name="SHEET_NAME" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *       &lt;attribute name="DATASOURCE" type="{http://www.w3.org/2001/XMLSchema}int" />
+     *       &lt;attribute name="SCRIPTSQL" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
+     * </pre>
+     * 
+     * 
+     */
+    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlType(name = "", propOrder = {
+        "metadata",
+        "sqlparameters"
+    })
+    public static class SOURCES {
+
+        @XmlElement(name = "METADATA", required = true)
+        protected TransactionManager.SOURCES.METADATA metadata;
+        @XmlElement(name = "SQL_PARAMETERS", required = true)
+        protected TransactionManager.SOURCES.SQLPARAMETERS sqlparameters;
+        @XmlAttribute(name = "SOURCE")
+        protected String source;
+        @XmlAttribute(name = "NAME")
+        protected String name;
+        @XmlAttribute(name = "TYPEDATA")
+        protected String typedata;
+        @XmlAttribute(name = "TYPESOURCE")
+        protected String typesource;
+        @XmlAttribute(name = "FILENAME")
+        protected String filename;
+        @XmlAttribute(name = "PATH")
+        protected String path;
+        @XmlAttribute(name = "HEADER")
+        protected Byte header;
+        @XmlAttribute(name = "FORMAT")
+        protected String format;
+        @XmlAttribute(name = "DELIMITER")
+        protected String delimiter;
+        @XmlAttribute(name = "LEFT_ENCLOSURE")
+        protected String leftenclosure;
+        @XmlAttribute(name = "RIGHT_ENCLOUSURE")
+        protected String rightenclousure;
+        @XmlAttribute(name = "SHEET_NAME")
+        protected String sheetname;
+        @XmlAttribute(name = "DATASOURCE")
+        protected Integer datasource;
+        @XmlAttribute(name = "SCRIPTSQL")
+        protected String scriptsql;
+
+        /**
+         * Obtiene el valor de la propiedad metadata.
+         * 
+         * @return
+         *     possible object is
+         *     {@link TransactionManager.SOURCES.METADATA }
+         *     
+         */
+        public TransactionManager.SOURCES.METADATA getMETADATA() {
+            return metadata;
+        }
+
+        /**
+         * Define el valor de la propiedad metadata.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link TransactionManager.SOURCES.METADATA }
+         *     
+         */
+        public void setMETADATA(TransactionManager.SOURCES.METADATA value) {
+            this.metadata = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad sqlparameters.
+         * 
+         * @return
+         *     possible object is
+         *     {@link TransactionManager.SOURCES.SQLPARAMETERS }
+         *     
+         */
+        public TransactionManager.SOURCES.SQLPARAMETERS getSQLPARAMETERS() {
+            return sqlparameters;
+        }
+
+        /**
+         * Define el valor de la propiedad sqlparameters.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link TransactionManager.SOURCES.SQLPARAMETERS }
+         *     
+         */
+        public void setSQLPARAMETERS(TransactionManager.SOURCES.SQLPARAMETERS value) {
+            this.sqlparameters = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad source.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getSOURCE() {
+            return source;
+        }
+
+        /**
+         * Define el valor de la propiedad source.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setSOURCE(String value) {
+            this.source = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad name.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getNAME() {
+            return name;
+        }
+
+        /**
+         * Define el valor de la propiedad name.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setNAME(String value) {
+            this.name = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad typedata.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getTYPEDATA() {
+            return typedata;
+        }
+
+        /**
+         * Define el valor de la propiedad typedata.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setTYPEDATA(String value) {
+            this.typedata = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad typesource.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getTYPESOURCE() {
+            return typesource;
+        }
+
+        /**
+         * Define el valor de la propiedad typesource.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setTYPESOURCE(String value) {
+            this.typesource = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad filename.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getFILENAME() {
+            return filename;
+        }
+
+        /**
+         * Define el valor de la propiedad filename.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setFILENAME(String value) {
+            this.filename = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad path.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getPATH() {
+            return path;
+        }
+
+        /**
+         * Define el valor de la propiedad path.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setPATH(String value) {
+            this.path = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad header.
+         * 
+         * @return
+         *     possible object is
+         *     {@link Byte }
+         *     
+         */
+        public Byte getHEADER() {
+            return header;
+        }
+
+        /**
+         * Define el valor de la propiedad header.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link Byte }
+         *     
+         */
+        public void setHEADER(Byte value) {
+            this.header = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad format.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getFORMAT() {
+            return format;
+        }
+
+        /**
+         * Define el valor de la propiedad format.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setFORMAT(String value) {
+            this.format = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad delimiter.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getDELIMITER() {
+            return delimiter;
+        }
+
+        /**
+         * Define el valor de la propiedad delimiter.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setDELIMITER(String value) {
+            this.delimiter = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad leftenclosure.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getLEFTENCLOSURE() {
+            return leftenclosure;
+        }
+
+        /**
+         * Define el valor de la propiedad leftenclosure.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setLEFTENCLOSURE(String value) {
+            this.leftenclosure = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad rightenclousure.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getRIGHTENCLOUSURE() {
+            return rightenclousure;
+        }
+
+        /**
+         * Define el valor de la propiedad rightenclousure.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setRIGHTENCLOUSURE(String value) {
+            this.rightenclousure = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad sheetname.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getSHEETNAME() {
+            return sheetname;
+        }
+
+        /**
+         * Define el valor de la propiedad sheetname.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setSHEETNAME(String value) {
+            this.sheetname = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad datasource.
+         * 
+         * @return
+         *     possible object is
+         *     {@link Integer }
+         *     
+         */
+        public Integer getDATASOURCE() {
+            return datasource;
+        }
+
+        /**
+         * Define el valor de la propiedad datasource.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link Integer }
+         *     
+         */
+        public void setDATASOURCE(Integer value) {
+            this.datasource = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad scriptsql.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getSCRIPTSQL() {
+            return scriptsql;
+        }
+
+        /**
+         * Define el valor de la propiedad scriptsql.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setSCRIPTSQL(String value) {
+            this.scriptsql = value;
+        }
+
+
+        /**
+         * <p>Clase Java para anonymous complex type.
+         * 
+         * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+         * 
+         * <pre>
+         * &lt;complexType>
+         *   &lt;complexContent>
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *       &lt;attribute name="SOURCE" type="{http://www.w3.org/2001/XMLSchema}string" />
+         *       &lt;attribute name="COLUMNAME" type="{http://www.w3.org/2001/XMLSchema}string" />
+         *       &lt;attribute name="ORDER_ID" type="{http://www.w3.org/2001/XMLSchema}int" />
+         *       &lt;attribute name="SQLTYPE" type="{http://www.w3.org/2001/XMLSchema}string" />
+         *     &lt;/restriction>
+         *   &lt;/complexContent>
+         * &lt;/complexType>
+         * </pre>
+         * 
+         * 
+         */
+        @XmlAccessorType(XmlAccessType.FIELD)
+        @XmlType(name = "")
+        public static class METADATA {
+
+            @XmlAttribute(name = "SOURCE")
+            protected String source;
+            @XmlAttribute(name = "COLUMNAME")
+            protected String columname;
+            @XmlAttribute(name = "ORDER_ID")
+            protected Integer orderid;
+            @XmlAttribute(name = "SQLTYPE")
+            protected String sqltype;
+
+            /**
+             * Obtiene el valor de la propiedad source.
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
+             */
+            public String getSOURCE() {
+                return source;
+            }
+
+            /**
+             * Define el valor de la propiedad source.
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
+             */
+            public void setSOURCE(String value) {
+                this.source = value;
+            }
+
+            /**
+             * Obtiene el valor de la propiedad columname.
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
+             */
+            public String getCOLUMNAME() {
+                return columname;
+            }
+
+            /**
+             * Define el valor de la propiedad columname.
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
+             */
+            public void setCOLUMNAME(String value) {
+                this.columname = value;
+            }
+
+            /**
+             * Obtiene el valor de la propiedad orderid.
+             * 
+             * @return
+             *     possible object is
+             *     {@link Integer }
+             *     
+             */
+            public Integer getORDERID() {
+                return orderid;
+            }
+
+            /**
+             * Define el valor de la propiedad orderid.
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link Integer }
+             *     
+             */
+            public void setORDERID(Integer value) {
+                this.orderid = value;
+            }
+
+            /**
+             * Obtiene el valor de la propiedad sqltype.
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
+             */
+            public String getSQLTYPE() {
+                return sqltype;
+            }
+
+            /**
+             * Define el valor de la propiedad sqltype.
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
+             */
+            public void setSQLTYPE(String value) {
+                this.sqltype = value;
+            }
+
+        }
+
+
+        /**
+         * <p>Clase Java para anonymous complex type.
+         * 
+         * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+         * 
+         * <pre>
+         * &lt;complexType>
+         *   &lt;complexContent>
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *       &lt;attribute name="SOURCE" type="{http://www.w3.org/2001/XMLSchema}string" />
+         *       &lt;attribute name="PARAMETER" type="{http://www.w3.org/2001/XMLSchema}string" />
+         *       &lt;attribute name="ID_ORDER" type="{http://www.w3.org/2001/XMLSchema}int" />
+         *       &lt;attribute name="TYPE">
+         *         &lt;simpleType>
+         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+         *             &lt;enumeration value="DIRECT"/>
+         *             &lt;enumeration value="PROPERTY"/>
+         *           &lt;/restriction>
+         *         &lt;/simpleType>
+         *       &lt;/attribute>
+         *       &lt;attribute name="SQLTYPE">
+         *         &lt;simpleType>
+         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+         *             &lt;enumeration value="VARCHAR"/>
+         *             &lt;enumeration value="LONGVARCHAR"/>
+         *             &lt;enumeration value="NUMERIC"/>
+         *             &lt;enumeration value="DECIMAL"/>
+         *             &lt;enumeration value="BIT"/>
+         *             &lt;enumeration value="TINYINT"/>
+         *             &lt;enumeration value="SMALLINT"/>
+         *             &lt;enumeration value="INTEGER"/>
+         *             &lt;enumeration value="BIGINT"/>
+         *             &lt;enumeration value="REAL"/>
+         *             &lt;enumeration value="FLOAT"/>
+         *             &lt;enumeration value="DOUBLE"/>
+         *             &lt;enumeration value="BINARY"/>
+         *             &lt;enumeration value="VARBINARY"/>
+         *             &lt;enumeration value="LONGVARBINARY"/>
+         *             &lt;enumeration value="DATE"/>
+         *             &lt;enumeration value="TIME"/>
+         *             &lt;enumeration value="TIMESTAMP"/>
+         *           &lt;/restriction>
+         *         &lt;/simpleType>
+         *       &lt;/attribute>
+         *       &lt;attribute name="IS_MULTIVALUE" type="{http://www.w3.org/2001/XMLSchema}int" />
+         *       &lt;attribute name="VALUE" type="{http://www.w3.org/2001/XMLSchema}string" />
+         *     &lt;/restriction>
+         *   &lt;/complexContent>
+         * &lt;/complexType>
+         * </pre>
+         * 
+         * 
+         */
+        @XmlAccessorType(XmlAccessType.FIELD)
+        @XmlType(name = "")
+        public static class SQLPARAMETERS {
+
+            @XmlAttribute(name = "SOURCE")
+            protected String source;
+            @XmlAttribute(name = "PARAMETER")
+            protected String parameter;
+            @XmlAttribute(name = "ID_ORDER")
+            protected Integer idorder;
+            @XmlAttribute(name = "TYPE")
+            protected String type;
+            @XmlAttribute(name = "SQLTYPE")
+            protected String sqltype;
+            @XmlAttribute(name = "IS_MULTIVALUE")
+            protected Integer ismultivalue;
+            @XmlAttribute(name = "VALUE")
+            protected String value;
+
+            /**
+             * Obtiene el valor de la propiedad source.
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
+             */
+            public String getSOURCE() {
+                return source;
+            }
+
+            /**
+             * Define el valor de la propiedad source.
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
+             */
+            public void setSOURCE(String value) {
+                this.source = value;
+            }
+
+            /**
+             * Obtiene el valor de la propiedad parameter.
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
+             */
+            public String getPARAMETER() {
+                return parameter;
+            }
+
+            /**
+             * Define el valor de la propiedad parameter.
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
+             */
+            public void setPARAMETER(String value) {
+                this.parameter = value;
+            }
+
+            /**
+             * Obtiene el valor de la propiedad idorder.
+             * 
+             * @return
+             *     possible object is
+             *     {@link Integer }
+             *     
+             */
+            public Integer getIDORDER() {
+                return idorder;
+            }
+
+            /**
+             * Define el valor de la propiedad idorder.
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link Integer }
+             *     
+             */
+            public void setIDORDER(Integer value) {
+                this.idorder = value;
+            }
+
+            /**
+             * Obtiene el valor de la propiedad type.
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
+             */
+            public String getTYPE() {
+                return type;
+            }
+
+            /**
+             * Define el valor de la propiedad type.
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
+             */
+            public void setTYPE(String value) {
+                this.type = value;
+            }
+
+            /**
+             * Obtiene el valor de la propiedad sqltype.
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
+             */
+            public String getSQLTYPE() {
+                return sqltype;
+            }
+
+            /**
+             * Define el valor de la propiedad sqltype.
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
+             */
+            public void setSQLTYPE(String value) {
+                this.sqltype = value;
+            }
+
+            /**
+             * Obtiene el valor de la propiedad ismultivalue.
+             * 
+             * @return
+             *     possible object is
+             *     {@link Integer }
+             *     
+             */
+            public Integer getISMULTIVALUE() {
+                return ismultivalue;
+            }
+
+            /**
+             * Define el valor de la propiedad ismultivalue.
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link Integer }
+             *     
+             */
+            public void setISMULTIVALUE(Integer value) {
+                this.ismultivalue = value;
+            }
+
+            /**
+             * Obtiene el valor de la propiedad value.
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
+             */
+            public String getVALUE() {
+                return value;
+            }
+
+            /**
+             * Define el valor de la propiedad value.
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
+             */
+            public void setVALUE(String value) {
+                this.value = value;
+            }
+
+        }
+
+    }
+
+
+    /**
+     * <p>Clase Java para anonymous complex type.
+     * 
+     * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+     * 
+     * <pre>
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;attribute name="PROCESS" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *       &lt;attribute name="DESCRIPTION" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *       &lt;attribute name="SOURCE_INPUT" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *       &lt;attribute name="SOURCE_OUTPUT" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
+     * </pre>
+     * 
+     * 
+     */
+    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlType(name = "")
+    public static class UNITSPROCCESS {
+
+        @XmlAttribute(name = "PROCESS")
+        protected String process;
+        @XmlAttribute(name = "DESCRIPTION")
+        protected String description;
+        @XmlAttribute(name = "SOURCE_INPUT")
+        protected String sourceinput;
+        @XmlAttribute(name = "SOURCE_OUTPUT")
+        protected String sourceoutput;
+
+        /**
+         * Obtiene el valor de la propiedad process.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getPROCESS() {
+            return process;
+        }
+
+        /**
+         * Define el valor de la propiedad process.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setPROCESS(String value) {
+            this.process = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad description.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getDESCRIPTION() {
+            return description;
+        }
+
+        /**
+         * Define el valor de la propiedad description.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setDESCRIPTION(String value) {
+            this.description = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad sourceinput.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getSOURCEINPUT() {
+            return sourceinput;
+        }
+
+        /**
+         * Define el valor de la propiedad sourceinput.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setSOURCEINPUT(String value) {
+            this.sourceinput = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad sourceoutput.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getSOURCEOUTPUT() {
+            return sourceoutput;
+        }
+
+        /**
+         * Define el valor de la propiedad sourceoutput.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setSOURCEOUTPUT(String value) {
+            this.sourceoutput = value;
+        }
+
+    }
+
+}

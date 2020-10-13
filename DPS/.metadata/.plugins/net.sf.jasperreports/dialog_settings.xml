@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="com.jaspersoft.studio.editor.gef.decorator.xls.PathAndDataDialog">
+		<item value="305" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="287" key="dialogY"/>
+		<item value="1903" key="dialogX"/>
+		<item value="245" key="dialogHeight"/>
+		<item value="305" key="dialogWidth"/>
+		<item value="245" key="DIALOG_HEIGHT"/>
+		<item value="545" key="DIALOG_X_ORIGIN"/>
+		<item value="295" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="com.jaspersoft.studio.editor.gef.rulers.actions.PositionDialog">
+		<item value="303" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="375" key="dialogY"/>
+		<item value="1904" key="dialogX"/>
+		<item value="113" key="dialogHeight"/>
+		<item value="303" key="dialogWidth"/>
+		<item value="113" key="DIALOG_HEIGHT"/>
+		<item value="546" key="DIALOG_X_ORIGIN"/>
+		<item value="383" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog">
+		<item value="843" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="0" key="dialogY"/>
+		<item value="1634" key="dialogX"/>
+		<item value="764" key="dialogHeight"/>
+		<item value="843" key="dialogWidth"/>
+		<item value="764" key="DIALOG_HEIGHT"/>
+		<item value="276" key="DIALOG_X_ORIGIN"/>
+		<item value="8" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="com.jaspersoft.studio.property.color.chooser.ColorDialog">
+		<item value="619" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="156" key="dialogY"/>
+		<item value="1746" key="dialogX"/>
+		<item value="442" key="dialogHeight"/>
+		<item value="619" key="dialogWidth"/>
+		<item value="442" key="DIALOG_HEIGHT"/>
+		<item value="254" key="DIALOG_X_ORIGIN"/>
+		<item value="-95" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

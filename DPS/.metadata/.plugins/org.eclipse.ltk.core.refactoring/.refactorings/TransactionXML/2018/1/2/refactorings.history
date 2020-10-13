@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;TRANSACTION.java&apos; to &apos;TransactionDataAccess/src/com.transaction.context&apos;&#x0D;&#x0A;- Original project: &apos;TransactionXML&apos;&#x0D;&#x0A;- Destination element: &apos;TransactionDataAccess/src/com.transaction.context&apos;&#x0D;&#x0A;- Original element: &apos;com.transactions.xml.TRANSACTION.java&apos;" description="Copy compilation unit" destination="=TransactionDataAccess/src&lt;com.transaction.context" element1="/src&lt;com.transactions.xml{TRANSACTION.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1515941291096" units="1" version="1.0"/>
+</session>

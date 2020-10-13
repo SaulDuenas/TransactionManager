@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isTitleNewPage="true" isFloatColumnFooter="true" uuid="681c805b-f02c-493a-a48b-2f7927ac19c3">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="dataAdapterTeseracto"/>
+	<property name="net.sf.jasperreports.print.keep.full.text" value="true"/>
+	<property name="net.sf.jasperreports.export.xls.remove.empty.space.between.columns" value="true"/>
+	<property name="net.sf.jasperreports.export.xls.remove.empty.space.between.rows" value="true"/>
+	<property name="net.sf.jasperreports.export.xls.wrap.text" value="false"/>
+	<property name="net.sf.jasperreports.export.xls.detect.cell.type" value="true"/>
+	<property name="net.sf.jasperreports.export.xls.white.page.background" value="false"/>
+	<property name="net.sf.jasperreports.print.create.bookmarks" value="false"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="dsMuestreo" uuid="1917b204-2787-453b-946e-f20382079dce">
+		<property name="com.jaspersoft.studio.data.sql.tables">
+			<![CDATA[Ik11ZXN0cmVvIiBBUyAsMTA0LDI5LDE4MDQ2Y2VlLTcwNmMtNGUzMi05MGFjLWU2ZDYwYjYwZGMx
+Nzs=]]>
+		</property>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="dataAdapterTeseracto"/>
+		<queryString language="SQL">
+			<![CDATA[SELECT top 100 "Muestreo"."Folio",
+	"Muestreo"."FechaHora",
+	"Muestreo"."Pozo",
+	"Muestreo"."Valor",
+	"Muestreo"."Variable",
+	"Muestreo"."TipoMuestra"
+FROM "Muestreo"]]>
+		</queryString>
+		<field name="Folio" class="java.math.BigDecimal">
+			<property name="com.jaspersoft.studio.field.label" value="Folio"/>
+		</field>
+		<field name="FechaHora" class="java.sql.Timestamp">
+			<property name="com.jaspersoft.studio.field.label" value="FechaHora"/>
+		</field>
+		<field name="Pozo" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.label" value="Pozo"/>
+		</field>
+		<field name="Valor" class="java.lang.Double">
+			<property name="com.jaspersoft.studio.field.label" value="Valor"/>
+		</field>
+		<field name="Variable" class="java.lang.Short">
+			<property name="com.jaspersoft.studio.field.label" value="Variable"/>
+		</field>
+		<field name="TipoMuestra" class="java.lang.Short">
+			<property name="com.jaspersoft.studio.field.label" value="TipoMuestra"/>
+		</field>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[SELECT 1]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="114" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="6" width="540" height="90" uuid="8e381b12-3d0e-4e4f-a8cc-e8be647d2cbe"/>
+				<componentElement>
+					<reportElement x="0" y="0" width="540" height="90" uuid="b7c4f08c-57d7-4bc2-8bd0-a0b3c1a4c587">
+						<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+						<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+						<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+						<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+					</reportElement>
+					<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+						<datasetRun subDataset="dsMuestreo" uuid="20ee47be-1bd9-4bb5-b6b9-eac2b2c393eb">
+							<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+						</datasetRun>
+						<jr:column width="70" uuid="2ad10dd1-2da4-4175-b727-add0095aff52">
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+							<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+								<staticText>
+									<reportElement key="" mode="Transparent" x="0" y="0" width="70" height="30" isPrintInFirstWholeBand="true" uuid="a3e5a560-4f8e-4ebd-b790-26f3800e94ad">
+										<property name="net.sf.jasperreports.export.xls.freeze.row.edge" value="Top"/>
+										<property name="net.sf.jasperreports.export.xls.cell.hidden" value="true"/>
+										<property name="net.sf.jasperreports.export.xls.auto.filter" value="End"/>
+										<property name="net.sf.jasperreports.export.xls.cell.locked" value="true"/>
+									</reportElement>
+									<text><![CDATA[Folio]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement x="0" y="0" width="70" height="30" uuid="44bd78cd-3bfe-4166-bcba-af6be0e81922"/>
+									<textFieldExpression><![CDATA[$F{Folio}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="100" uuid="68fe430e-2360-45bf-adf1-9ff3cae758fe">
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+							<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+								<staticText>
+									<reportElement x="0" y="0" width="100" height="30" uuid="c6e0ffeb-a930-43c5-b69e-6d9b5974a563"/>
+									<text><![CDATA[FechaHora]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement x="0" y="0" width="100" height="30" uuid="203a7022-7b74-4960-b185-db6b6b801870"/>
+									<textFieldExpression><![CDATA[$F{FechaHora}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="90" uuid="aaac1381-c16e-4ce1-9b9e-622912e90f44">
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+							<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+								<staticText>
+									<reportElement x="0" y="0" width="90" height="30" uuid="252e01de-b0c0-44dd-b8a8-9c8e6fd32800"/>
+									<text><![CDATA[Pozo]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement x="0" y="0" width="90" height="30" uuid="bf28f387-9ab8-42ec-b715-7e6de6d7ea82"/>
+									<textFieldExpression><![CDATA[$F{Pozo}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="66" uuid="ac7a925e-90d5-4718-a3f3-00bf82ca9b16">
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+							<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+								<staticText>
+									<reportElement x="0" y="0" width="66" height="30" uuid="b9413bed-dbf1-417a-837d-e2c61f21ebdb"/>
+									<text><![CDATA[Valor]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement x="0" y="0" width="66" height="30" uuid="a94cdebd-750d-4dd3-85f0-28110d1b4dd7"/>
+									<textFieldExpression><![CDATA[$F{Valor}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="84" uuid="b9b82670-1c21-419b-aba3-a7fcb0583f97">
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+							<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+								<staticText>
+									<reportElement x="0" y="0" width="84" height="30" uuid="e68b9e25-ea27-4249-8eba-24c36094cf3b"/>
+									<text><![CDATA[Variable]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement x="0" y="0" width="84" height="30" uuid="b75e6652-13ec-4beb-8314-27824dd10f22"/>
+									<textFieldExpression><![CDATA[$F{Variable}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="130" uuid="9a557de7-07c8-401c-a526-4aed3ef6c3cc">
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
+							<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+								<staticText>
+									<reportElement x="0" y="0" width="130" height="30" uuid="bd90e283-f5b7-494e-b833-4064e771977c"/>
+									<text><![CDATA[TipoMuestra]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement x="0" y="0" width="130" height="30" uuid="346d78a3-b1bb-430d-a88c-5ff94a6172d6"/>
+									<textFieldExpression><![CDATA[$F{TipoMuestra}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+					</jr:table>
+				</componentElement>
+			</frame>
+		</band>
+	</detail>
+</jasperReport>
