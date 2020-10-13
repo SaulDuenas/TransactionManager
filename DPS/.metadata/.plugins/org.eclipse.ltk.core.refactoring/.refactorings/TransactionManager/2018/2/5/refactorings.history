@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Move package &apos;generated&apos; to &apos;TransactionXML/src&apos;&#x0D;&#x0A;- Original project: &apos;TransactionManager&apos;&#x0D;&#x0A;- Destination element: &apos;TransactionXML/src&apos;&#x0D;&#x0A;- Original element: &apos;TransactionManager/src/generated&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move package" destination="=TransactionXML/src" element1="/src&lt;generated" flags="589830" fragments="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1517500255363" version="1.0"/>
-</session>

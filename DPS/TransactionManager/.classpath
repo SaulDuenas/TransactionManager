@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="D:/GateTech/Repositorio/java/commons-dbcp2-2.1.1.jar"/>
-	<classpathentry kind="lib" path="D:/GateTech/Repositorio/jdbc/sqljdbc4-2.0.jar"/>
-	<classpathentry kind="lib" path="D:/GateTech/Repositorio/jdbc/com.mysql.jdbc_5.1.5.jar"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/TransactionDataAccess"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/sqlDataAccess"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/TransactionDataAccess"/>
+	<classpathentry kind="lib" path="C:/gatetch/Infraestructura/Repository/jdbc/sqljdbc4-2.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/gatetch/Infraestructura/Repository/java/org.apache.commons.io.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry including="config/" kind="src" path="src/main/resources"/>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="src" path="src/test/java"/>
+	<classpathentry kind="lib" path="C:/gatetch/Infraestructura/Repository/java/log4j-1.2.17.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

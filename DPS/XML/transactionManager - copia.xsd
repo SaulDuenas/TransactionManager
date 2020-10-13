@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema 
+   elementFormDefault="qualified"
+   xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <xs:element name="TRANSACTIONMANAGER">
+      <xs:complexType>
+         <xs:sequence>
+            <!--
+            Se registra todo tipo de Fuente de Datos
+            -->
+            <xs:element name="SOURCE" maxOccurs="1000" minOccurs="1">
+               <xs:complexType>
+                  <xs:sequence>
+                     <!--
+                     Registro de metadatos de las fuentes de datos,
+                     Orden 
+                     -->
+                     <xs:element name="METADATA" maxOccurs="1000" minOccurs="0">
+                        <xs:complexType>
+                           <!--
+                           Nombre identificador
+                           -->
+                           <xs:attribute name="NAME" type="xs:string">
+                           </xs:attribute>
+                           <xs:attribute name="COLNAME_SOURCE" type="xs:string">
+                           </xs:attribute>
+                           <xs:attribute name="ORDERID_SOURCE" type="xs:int">
+                           </xs:attribute>
+                           <xs:attribute name="COLNAME_LOAD" type="xs:string">
+                           </xs:attribute>
+                           <xs:attribute name="ORDERID_LOAD" type="xs:int">
+                           </xs:attribute>
+                           <xs:attribute name="SQLTYPE" type="xs:string">
+                           </xs:attribute>
+                           <!--
+                           formato de Salida, utilizado en fechas y numeros
+                           -->
+                           <xs:attribute name="FORMAT" type="xs:string">
+                           </xs:attribute>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="PARAMETER" maxOccurs="1000" minOccurs="0">
+                        <xs:complexType>
+                           <!--
+                           Nombre identificador
+                           -->
+                           <xs:attribute name="NAME" type="xs:string">
+                           </xs:attribute>
+                           <!--
+                           PK - Nombre del parametro
+                           -->
+                           <xs:attribute name="PARAMETER" type="xs:string">
+                           </xs:attribute>
+                           <!--
+                           Posición del parametro
+                           -->
+                           <xs:attribute name="ID_ORDER" type="xs:int">
+                           </xs:attribute>
+                           <!--
+                           DIRECT, PROPERTY   see notes
+                           -->
+                           <xs:attribute name="TYPE">
+                              <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                   <xs:enumeration value="DIRECT"/>
+                                   <xs:enumeration value="PROPERTY"/>
+                                </xs:restriction>
+                              </xs:simpleType>
+                           </xs:attribute>
+                           <!--
+                           Tipo de Dato ANSI SQL (VARCHAR,INTEGER, etc) 
+                           -->
+                           <xs:attribute name="SQLTYPE">
+                              <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                   <xs:enumeration value="VARCHAR"/>
+                                   <xs:enumeration value="LONGVARCHAR"/>
+                                   <xs:enumeration value="NUMERIC"/>
+                                   <xs:enumeration value="DECIMAL"/>
+                                   <xs:enumeration value="BIT"/>
+                                   <xs:enumeration value="TINYINT"/>
+                                   <xs:enumeration value="SMALLINT"/>
+                                   <xs:enumeration value="INTEGER"/>
+                                   <xs:enumeration value="BIGINT"/>
+                                   <xs:enumeration value="REAL"/>
+                                   <xs:enumeration value="FLOAT"/>
+                                   <xs:enumeration value="DOUBLE"/>
+                                   <xs:enumeration value="BINARY"/>
+                                   <xs:enumeration value="VARBINARY"/>
+                                   <xs:enumeration value="LONGVARBINARY"/>
+                                   <xs:enumeration value="DATE"/>
+                                   <xs:enumeration value="TIME"/>
+                                   <xs:enumeration value="TIMESTAMP"/>
+                                   <xs:enumeration value="N/A"/>
+                                </xs:restriction>
+                              </xs:simpleType>
+                           </xs:attribute>
+                           <!--
+                           Indicador de un parametro de multiples valores
+                           -->
+                           <xs:attribute name="IS_MULTIVALUE">
+                              <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                   <xs:enumeration value="YES"/>
+                                   <xs:enumeration value="NO"/>
+                                </xs:restriction>
+                              </xs:simpleType>
+                           </xs:attribute>
+                           <!--
+                           El dato o valor asociado al parametro SQL
+                           -->
+                           <xs:attribute name="VALUE" type="xs:string">
+                           </xs:attribute>
+                           <xs:attribute name="FORMAT" type="xs:string">
+                           </xs:attribute>
+                        </xs:complexType>
+                     </xs:element>
+                  </xs:sequence>   
+                  <!--
+                  Nombre identificador
+                  -->
+                  <xs:attribute name="NAME" type="xs:string">
+                  </xs:attribute>
+                  <!--
+                  Campo adicional para catalogar los registros de la tabla
+                  -->
+                  <xs:attribute name="GROUP" type="xs:string">
+                  </xs:attribute>
+                  <!--
+                  SQLtoTEXTFILE,SQLtoSQL, JPXMLtoEXCEL, JPXMLtoPDF
+                  -->
+                  <xs:attribute name="TYPESOURCE" type="xs:string">
+                  </xs:attribute>
+                  <!--
+                  Nombre del archivo
+                  
+                  -->
+                  <xs:attribute name="FILENAME" type="xs:string">
+                  </xs:attribute>
+                  <!--
+                  (Source = FileText) - Ruta Entrada/Salida
+                  -->
+                  <xs:attribute name="PATH" type="xs:string">
+                  </xs:attribute>
+                  <!--
+                  Tipode Codificación del archivo de Salida (UTF8,ANSI,etc
+                  -->
+                  <xs:attribute name="CODINGFORMAT" type="xs:string">
+                  </xs:attribute>
+                  <!--
+                  Para indicar que la primera fila tiene nombre de las columnas de la info
+                  -->
+                  <xs:attribute name="HEADER">
+                     <xs:simpleType>
+                       <xs:restriction base="xs:string">
+                          <xs:enumeration value="N/A"/>
+                          <xs:enumeration value="YES"/>
+                          <xs:enumeration value="NO"/>
+                       </xs:restriction>
+                     </xs:simpleType>
+                  </xs:attribute>
+                  <!--
+                  Caracter delimitador (ejem , |, TAB)
+                  -->
+                  <xs:attribute name="DELIMITER" type="xs:string">
+                  </xs:attribute>
+                  <!--
+                  Caracter identificador a la izquierda
+                  -->
+                  <xs:attribute name="LEFT_ENCLOSURE" type="xs:string">
+                  </xs:attribute>
+                  <!--
+                  Caracter identificador a la derecha
+                  -->
+                  <xs:attribute name="RIGHT_ENCLOUSURE" type="xs:string">
+                  </xs:attribute>
+                  <!--
+                  Solo MSEXCEL - Nombre de la hoja de trabajo 
+                  -->
+                  <xs:attribute name="SHEET_NAME" type="xs:string">
+                  </xs:attribute>
+                  <!--
+                  Ruta de la plantilla JAsper Reports
+                  -->
+                  <xs:attribute name="JRXMLPATH" type="xs:string">
+                  </xs:attribute>
+                  <!--
+                  Conexión a Base de Datos, solo cuando TYPESOURCE = SQL
+                  -->
+                  <xs:attribute name="DATASOURCE" type="xs:string">
+                  </xs:attribute>
+                  <!--
+                  Consulta SQL de Extracción/Inyección de Datos, Solo cuanto TYPESOURCE = SQL
+                  -->
+                  <xs:attribute name="SQLSOURCE" type="xs:string">
+                  </xs:attribute>
+                  <!--
+                  Conexión a Base de Datos, solo cuando TYPESOURCE = SQL
+                  -->
+                  <xs:attribute name="DATALOAD" type="xs:string">
+                  </xs:attribute>
+                  <!--
+                  Consulta SQL de Extracción/Inyección de Datos, Solo cuanto TYPESOURCE = SQL
+                  -->
+                  <xs:attribute name="SQLLOAD" type="xs:string">
+                  </xs:attribute>
+               </xs:complexType>
+            </xs:element>
+            <xs:element name="PROPERTY" maxOccurs="1000" minOccurs="0">
+               <xs:complexType>
+                  <!--
+                  PK - Nombre del parametro
+                  -->
+                  <xs:attribute name="PROPERTY" type="xs:string">
+                  </xs:attribute>
+                  <!--
+                  Parametro Padre
+                  -->
+                  <xs:attribute name="PROPERTY_PARENT" type="xs:string">
+                  </xs:attribute>
+                  <!--
+                  Campo utilizado para catalogar las propiedades
+                  -->
+                  <xs:attribute name="CATEGORY" type="xs:string">
+                  </xs:attribute>
+                  <!--
+                  Tipo de Dato ANSI SQL (VARCHAR,INTEGER, etc) 
+                  -->
+                  <xs:attribute name="SQLTYPE">
+                     <xs:simpleType>
+                       <xs:restriction base="xs:string">
+                          <xs:enumeration value="VARCHAR"/>
+                          <xs:enumeration value="LONGVARCHAR"/>
+                          <xs:enumeration value="NUMERIC"/>
+                          <xs:enumeration value="DECIMAL"/>
+                          <xs:enumeration value="BIT"/>
+                          <xs:enumeration value="TINYINT"/>
+                          <xs:enumeration value="SMALLINT"/>
+                          <xs:enumeration value="INTEGER"/>
+                          <xs:enumeration value="BIGINT"/>
+                          <xs:enumeration value="REAL"/>
+                          <xs:enumeration value="FLOAT"/>
+                          <xs:enumeration value="DOUBLE"/>
+                          <xs:enumeration value="BINARY"/>
+                          <xs:enumeration value="VARBINARY"/>
+                          <xs:enumeration value="LONGVARBINARY"/>
+                          <xs:enumeration value="DATE"/>
+                          <xs:enumeration value="TIME"/>
+                          <xs:enumeration value="TIMESTAMP"/>
+                          <xs:enumeration value="N/A"/>
+                       </xs:restriction>
+                     </xs:simpleType>
+                  </xs:attribute>
+                  <!--
+                  DIRECT, SQLVALUE   see notes
+                  -->
+                  <xs:attribute name="TYPE">
+                     <xs:simpleType>
+                       <xs:restriction base="xs:string">
+                          <xs:enumeration value="DIRECT"/>
+                          <xs:enumeration value="SQLVALUE"/>
+                          <xs:enumeration value="SYSTEM"/>
+                       </xs:restriction>
+                     </xs:simpleType>
+                  </xs:attribute>
+                  <!--
+                  Origen de datos, solo cuando el TYPE es "SQLVALUE"
+                  -->
+                  <xs:attribute name="DATASOURCE" type="xs:string">
+                  </xs:attribute>
+                  <!--
+                  Indicador de un parametro de multiples valores
+                  -->
+                  <xs:attribute name="IS_MULTIVALUE">
+                     <xs:simpleType>
+                       <xs:restriction base="xs:string">
+                          <xs:enumeration value="YES"/>
+                          <xs:enumeration value="NO"/>
+                       </xs:restriction>
+                     </xs:simpleType>
+                  </xs:attribute>
+                  <!--
+                  El valor o dato asociado al parametro
+                  -->
+                  <xs:attribute name="VALUE" type="xs:string">
+                  </xs:attribute>
+                  <xs:attribute name="FORMAT" type="xs:string">
+                  </xs:attribute>
+               </xs:complexType>
+            </xs:element>
+            <!--
+            Registro de Conexiones a base de datos
+            -->
+            <xs:element name="CONNECTION" maxOccurs="1000" minOccurs="0">
+               <xs:complexType>
+                  <!--
+                  PK - Clave de la Conexión a Base de Datos
+                  
+                  Usar nombres cortos como claves , ejem. SADB
+                  -->
+                  <xs:attribute name="DATASOURCE" type="xs:string">
+                  </xs:attribute>
+                  <!--
+                  Nombre descriptivo para identificar la conexión
+                  -->
+                  <xs:attribute name="NAME" type="xs:string">
+                  </xs:attribute>
+                  <xs:attribute name="JNDINAME" type="xs:string">
+                  </xs:attribute>
+                  <!--
+                  Cadena de Conexión a la Base de Datos
+                  -->
+                  <xs:attribute name="URL" type="xs:string">
+                  </xs:attribute>
+                  <!--
+                  Nombre de Usuario
+                  -->
+                  <xs:attribute name="USER" type="xs:string">
+                  </xs:attribute>
+                  <!--
+                  Contraseña de Conexión
+                  -->
+                  <xs:attribute name="PASSWORD" type="xs:string">
+                  </xs:attribute>
+                  <!--
+                  Driver de conexión
+                  -->
+                  <xs:attribute name="DRIVERCLASSNAME" type="xs:string">
+                  </xs:attribute>
+                  <xs:attribute name="VALIDATION_QUERY" type="xs:string">
+                  </xs:attribute>
+               </xs:complexType>
+            </xs:element>
+         </xs:sequence>   
+      </xs:complexType>
+      <xs:key name="KEY_2">
+         <xs:selector xpath="SOURCE"/>
+         <xs:field xpath="@NAME"/>
+      </xs:key>
+      <xs:key name="KEY_3">
+         <xs:selector xpath="SOURCE/METADATA"/>
+         <xs:field xpath="@NAME"/>
+         <xs:field xpath="@COLNAME_SOURCE"/>
+      </xs:key>
+      <xs:key name="KEY_4">
+         <xs:selector xpath="SOURCE/PARAMETER"/>
+         <xs:field xpath="@NAME"/>
+         <xs:field xpath="@PARAMETER"/>
+      </xs:key>
+      <xs:key name="KEY_5">
+         <xs:selector xpath="PROPERTY"/>
+         <xs:field xpath="@PROPERTY"/>
+      </xs:key>
+      <xs:key name="KEY_1">
+         <xs:selector xpath="CONNECTION"/>
+         <xs:field xpath="@DATASOURCE"/>
+      </xs:key>
+   </xs:element>
+</xs:schema>

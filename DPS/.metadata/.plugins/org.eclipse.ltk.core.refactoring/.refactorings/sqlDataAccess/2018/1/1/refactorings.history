@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;com.gateteh.database.DataConn&apos; to &apos;DataAccess&apos;&#x0D;&#x0A;- Original project: &apos;sqlDataAccess&apos;&#x0D;&#x0A;- Original element: &apos;com.gateteh.database.DataConn&apos;&#x0D;&#x0A;- Renamed element: &apos;com.gateteh.database.DataAccess&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;DataConn&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.gateteh.database{DataConn.java[DataConn" matchStrategy="1" name="DataAccess" qualified="false" references="true" similarDeclarations="false" stamp="1515210508598" textual="false" version="1.0"/>
-</session>
